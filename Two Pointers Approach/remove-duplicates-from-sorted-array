@@ -16,5 +16,19 @@ class Solution:
 
         return len(unique_list)
 
+    # Two pointer approach 
+        i = 0 # officer saab
+        j = 1 # CM saab
+        res = 1 # there will atleast 1 unique value 
+        while(j<len(nums)):
+            if(nums[j] == nums[j-1]):
+                j+= 1
+                continue
+            nums[i+1] = nums[j]
+            i+=1
+            res+=1
+            j+=1
+        return res 
+        
         
         
