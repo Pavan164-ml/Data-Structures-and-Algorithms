@@ -1,0 +1,11 @@
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        # Brute force first square the number then sort it 
+        # T: OnLog(N) --> Worst
+        # S: O(N) --> Very bad
+        arr = [] # Initializing an extra array to store the squares
+        for i in range(len(nums)):
+            arr.append(nums[i]*nums[i])
+        arr.sort() # sorting the squared array so negative values will be handled as well.
+        return arr
+
