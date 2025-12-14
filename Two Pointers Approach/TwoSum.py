@@ -1,6 +1,7 @@
 Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
+      # Bruteforce approach using 2 loops by finding all possible combinations
         for i in range(len(nums)):
             j = i+1
             for j in range(len(nums)):
@@ -30,3 +31,19 @@ class Solution:
                 return [seen[check],i] # this will only return the index not the number, because hashmap key is number and value is index here 
             seen[num]= i  # if the difference is not present we add the key as number and value as current index for future iterations
         return None # if the loop is completed and we dont find any answes then there is no result
+
+
+link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        # 2 pointer approach without using any extra space
+        i = 0 
+        j = len(numbers)-1
+        while(i < len(numbers)):
+            if(numbers[i]+numbers[j]==target):
+                return i+1,j+1
+            elif(numbers[i]+numbers[j]<target):
+                i+=1
+            else:
+                j-=1
+        return None
+
