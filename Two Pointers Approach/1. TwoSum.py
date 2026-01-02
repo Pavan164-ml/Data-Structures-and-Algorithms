@@ -32,6 +32,11 @@ class Solution:
             seen[num]= i  # if the difference is not present we add the key as number and value as current index for future iterations
         return None # if the loop is completed and we dont find any answes then there is no result
 
+# In the above approach lets say we have x+y = target 
+# x is the ith element; y = target - x
+# Using hashmap we try to find out the y value and dont care which index it is present at;
+# Only way is to check it in the hasmap and return if the difference is found in HM.
+
 
 link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
     def twoSum(self, nums: List[int], target: int) -> List[int]:
