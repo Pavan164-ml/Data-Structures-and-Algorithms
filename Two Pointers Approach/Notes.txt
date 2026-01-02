@@ -1,0 +1,1 @@
+1. Determine if the output should be index-based or position-based by cross-referencing the sample cases and their corresponding solutions
