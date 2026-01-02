@@ -1,3 +1,13 @@
+| Aspect        | 2Sum            | 2Sum II         |
+| ------------- | --------------- | --------------- |
+| Array sorted? | ❌ No            | ✅ Yes           |
+| Output        | 0-based indices | 1-based indices |
+| Best approach | Hash map        | Two pointers    |
+| Space         | O(n)            | O(1)            |
+| Can sort?     | Bad idea        | Already sorted  |
+
+
+
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:
         # numbers.sort() # not required as the array is already sorted  
