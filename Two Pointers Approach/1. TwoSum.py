@@ -1,4 +1,18 @@
 Link: https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/
+
+
+### Bruteforce
+class Solution:
+    def twoSum(self, numbers: list[int], target: int) -> list[int]:
+        # Brute force
+        for i in range(len(numbers)): # We need to see all the elements
+            required = target - numbers[i] # calculates the difference to find in the list
+            for j in range(i+1,len(numbers)): # we dont need to start from 0 because there is no point in goin back we would have already done that comparison given the array is sorted
+                if numbers[j] == required:
+                    return i+1,j+1 # because it is not expecting 0 based index as return type instead want the positional numbers
+        
+
+
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
       # Bruteforce approach using 2 loops by finding all possible combinations
