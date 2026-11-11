@@ -46,6 +46,29 @@ class Solution:
             seen[num]= i  # if the difference is not present we add the key as number and value as current index for future iterations
         return None # if the loop is completed and we dont find any answes then there is no result
 
+# nums = [2, 7, 11, 15]
+# target = 9
+
+# Iteration 1
+# i = 0
+# num = 2
+
+# - check = 9 - 2 = 7
+# - Is 7 in seen? No. Dictionary is empty.
+# - Execute seen[2] = 0.
+# seen = {2: 0}
+
+
+# Iteration 2
+# i = 1
+# num = 7
+
+# - check = 9 - 7 = 2
+# - Is 2 in seen? Yes!
+# - Execute return [seen[2], 1].
+# Result
+# [0, 1]
+
 # In the above approach lets say we have x+y = target 
 # x is the ith element; y = target - x
 # Using hashmap we try to find out the y value and dont care which index it is present at;
